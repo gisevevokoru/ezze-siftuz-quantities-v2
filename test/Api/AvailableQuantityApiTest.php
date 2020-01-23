@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  EzzeSiftuz\Quantitiesv2
+ * @package  EzzeSiftuz\QuantitiesV2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,17 +25,17 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace EzzeSiftuz\Quantitiesv2;
+namespace EzzeSiftuz\QuantitiesV2;
 
-use EzzeSiftuz\Quantitiesv2\Configuration;
-use EzzeSiftuz\Quantitiesv2\ApiException;
-use EzzeSiftuz\Quantitiesv2\ObjectSerializer;
+use EzzeSiftuz\QuantitiesV2\Configuration;
+use EzzeSiftuz\QuantitiesV2\ApiException;
+use EzzeSiftuz\QuantitiesV2\ObjectSerializer;
 
 /**
  * AvailableQuantityApiTest Class Doc Comment
  *
  * @category Class
- * @package  EzzeSiftuz\Quantitiesv2
+ * @package  EzzeSiftuz\QuantitiesV2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

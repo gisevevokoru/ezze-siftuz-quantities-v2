@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  EzzeSiftuz\Quantitiesv2
+ * @package  EzzeSiftuz\QuantitiesV2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,14 +25,14 @@
  * Do not edit the class manually.
  */
 
-namespace EzzeSiftuz\Quantitiesv2;
+namespace EzzeSiftuz\QuantitiesV2;
 
 /**
  * Configuration Class Doc Comment
  * PHP version 5
  *
  * @category Class
- * @package  EzzeSiftuz\Quantitiesv2
+ * @package  EzzeSiftuz\QuantitiesV2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -392,7 +392,7 @@ class Configuration
      */
     public static function toDebugReport()
     {
-        $report  = 'PHP SDK (EzzeSiftuz\Quantitiesv2) Debug Report:' . PHP_EOL;
+        $report  = 'PHP SDK (EzzeSiftuz\QuantitiesV2) Debug Report:' . PHP_EOL;
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    OpenAPI Spec Version: 2.0.0' . PHP_EOL;

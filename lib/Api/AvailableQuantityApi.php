@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  EzzeSiftuz\Quantitiesv2
+ * @package  EzzeSiftuz\QuantitiesV2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace EzzeSiftuz\Quantitiesv2\Api;
+namespace EzzeSiftuz\QuantitiesV2\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use EzzeSiftuz\Quantitiesv2\ApiException;
-use EzzeSiftuz\Quantitiesv2\Configuration;
-use EzzeSiftuz\Quantitiesv2\HeaderSelector;
-use EzzeSiftuz\Quantitiesv2\ObjectSerializer;
+use EzzeSiftuz\QuantitiesV2\ApiException;
+use EzzeSiftuz\QuantitiesV2\Configuration;
+use EzzeSiftuz\QuantitiesV2\HeaderSelector;
+use EzzeSiftuz\QuantitiesV2\ObjectSerializer;
 
 /**
  * AvailableQuantityApi Class Doc Comment
  *
  * @category Class
- * @package  EzzeSiftuz\Quantitiesv2
+ * @package  EzzeSiftuz\QuantitiesV2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -91,11 +91,11 @@ class AvailableQuantityApi
      *
      * Update the available quantity for a specific SKU (up to 200 SKUs per request)
      *
-     * @param  \EzzeSiftuz\Quantitiesv2\Model\AvailableQuantityRequestDTOV2[] $body availableQuantityRequestDTO (required)
+     * @param  \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[] $body availableQuantityRequestDTO (required)
      * @param  string $authorization Access Token (required)
      * @param  string $name name (optional)
      *
-     * @throws \EzzeSiftuz\Quantitiesv2\ApiException on non-2xx response
+     * @throws \EzzeSiftuz\QuantitiesV2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -110,11 +110,11 @@ class AvailableQuantityApi
      *
      * Update the available quantity for a specific SKU (up to 200 SKUs per request)
      *
-     * @param  \EzzeSiftuz\Quantitiesv2\Model\AvailableQuantityRequestDTOV2[] $body availableQuantityRequestDTO (required)
+     * @param  \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[] $body availableQuantityRequestDTO (required)
      * @param  string $authorization Access Token (required)
      * @param  string $name (optional)
      *
-     * @throws \EzzeSiftuz\Quantitiesv2\ApiException on non-2xx response
+     * @throws \EzzeSiftuz\QuantitiesV2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -180,7 +180,7 @@ class AvailableQuantityApi
                 case 207:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EzzeSiftuz\Quantitiesv2\Model\UpdateQuantityMultiStatusResponse',
+                        '\EzzeSiftuz\QuantitiesV2\Model\UpdateQuantityMultiStatusResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -188,7 +188,7 @@ class AvailableQuantityApi
                 case 413:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EzzeSiftuz\Quantitiesv2\Model\ApiErrorResponseV2',
+                        '\EzzeSiftuz\QuantitiesV2\Model\ApiErrorResponseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -196,7 +196,7 @@ class AvailableQuantityApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EzzeSiftuz\Quantitiesv2\Model\ApiErrorResponseV2',
+                        '\EzzeSiftuz\QuantitiesV2\Model\ApiErrorResponseV2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -211,7 +211,7 @@ class AvailableQuantityApi
      *
      * Update the available quantity for a specific SKU (up to 200 SKUs per request)
      *
-     * @param  \EzzeSiftuz\Quantitiesv2\Model\AvailableQuantityRequestDTOV2[] $body availableQuantityRequestDTO (required)
+     * @param  \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[] $body availableQuantityRequestDTO (required)
      * @param  string $authorization Access Token (required)
      * @param  string $name (optional)
      *
@@ -233,7 +233,7 @@ class AvailableQuantityApi
      *
      * Update the available quantity for a specific SKU (up to 200 SKUs per request)
      *
-     * @param  \EzzeSiftuz\Quantitiesv2\Model\AvailableQuantityRequestDTOV2[] $body availableQuantityRequestDTO (required)
+     * @param  \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[] $body availableQuantityRequestDTO (required)
      * @param  string $authorization Access Token (required)
      * @param  string $name (optional)
      *
@@ -285,7 +285,7 @@ class AvailableQuantityApi
     /**
      * Create request for operation 'storeAvailableQuantitiesUsingPOST'
      *
-     * @param  \EzzeSiftuz\Quantitiesv2\Model\AvailableQuantityRequestDTOV2[] $body availableQuantityRequestDTO (required)
+     * @param  \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[] $body availableQuantityRequestDTO (required)
      * @param  string $authorization Access Token (required)
      * @param  string $name (optional)
      *

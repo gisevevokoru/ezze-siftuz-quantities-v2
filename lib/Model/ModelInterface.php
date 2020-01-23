@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  EzzeSiftuz\Quantitiesv2\Model
+ * @package  EzzeSiftuz\QuantitiesV2\Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,12 +26,12 @@
  * Do not edit the class manually.
  */
 
-namespace EzzeSiftuz\Quantitiesv2\Model;
+namespace EzzeSiftuz\QuantitiesV2\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package EzzeSiftuz\Quantitiesv2\Model
+ * @package EzzeSiftuz\QuantitiesV2\Model
  * @author  Swagger Codegen team
  */
 interface ModelInterface

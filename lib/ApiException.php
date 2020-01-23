@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  EzzeSiftuz\Quantitiesv2
+ * @package  EzzeSiftuz\QuantitiesV2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace EzzeSiftuz\Quantitiesv2;
+namespace EzzeSiftuz\QuantitiesV2;
 
 use \Exception;
 
@@ -33,7 +33,7 @@ use \Exception;
  * ApiException Class Doc Comment
  *
  * @category Class
- * @package  EzzeSiftuz\Quantitiesv2
+ * @package  EzzeSiftuz\QuantitiesV2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

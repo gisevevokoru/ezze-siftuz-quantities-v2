@@ -57,12 +57,12 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new EzzeSiftuz\Quantitiesv2\Api\AvailableQuantityApi(
+$apiInstance = new EzzeSiftuz\QuantitiesV2\Api\AvailableQuantityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = array(new \EzzeSiftuz\Quantitiesv2\Model\AvailableQuantityRequestDTOV2()); // \EzzeSiftuz\Quantitiesv2\Model\AvailableQuantityRequestDTOV2[] | availableQuantityRequestDTO
+$body = array(new \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2()); // \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[] | availableQuantityRequestDTO
 $authorization = "\"Bearer access_token\""; // string | Access Token
 $name = "name_example"; // string | 
 

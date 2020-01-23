@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  EzzeSiftuz\Quantitiesv2
+ * @package  EzzeSiftuz\QuantitiesV2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace EzzeSiftuz\Quantitiesv2\Model;
+namespace EzzeSiftuz\QuantitiesV2\Model;
 
 use \ArrayAccess;
-use \EzzeSiftuz\Quantitiesv2\ObjectSerializer;
+use \EzzeSiftuz\QuantitiesV2\ObjectSerializer;
 
 /**
  * UpdateQuantityMultiStatusResponse Class Doc Comment
  *
  * @category Class
- * @package  EzzeSiftuz\Quantitiesv2
+ * @package  EzzeSiftuz\QuantitiesV2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,8 +56,8 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'results' => '\EzzeSiftuz\Quantitiesv2\Model\AvailableQuantityRequestDTOV2[]',
-'errors' => '\EzzeSiftuz\Quantitiesv2\Model\ApiErrorV2[]'    ];
+        'results' => '\EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[]',
+'errors' => '\EzzeSiftuz\QuantitiesV2\Model\ApiErrorV2[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -208,7 +208,7 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
     /**
      * Gets results
      *
-     * @return \EzzeSiftuz\Quantitiesv2\Model\AvailableQuantityRequestDTOV2[]
+     * @return \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[]
      */
     public function getResults()
     {
@@ -218,7 +218,7 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
     /**
      * Sets results
      *
-     * @param \EzzeSiftuz\Quantitiesv2\Model\AvailableQuantityRequestDTOV2[] $results List of all the skus with available quantity
+     * @param \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[] $results List of all the skus with available quantity
      *
      * @return $this
      */
@@ -232,7 +232,7 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
     /**
      * Gets errors
      *
-     * @return \EzzeSiftuz\Quantitiesv2\Model\ApiErrorV2[]
+     * @return \EzzeSiftuz\QuantitiesV2\Model\ApiErrorV2[]
      */
     public function getErrors()
     {
@@ -242,7 +242,7 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
     /**
      * Sets errors
      *
-     * @param \EzzeSiftuz\Quantitiesv2\Model\ApiErrorV2[] $errors errors
+     * @param \EzzeSiftuz\QuantitiesV2\Model\ApiErrorV2[] $errors errors
      *
      * @return $this
      */

@@ -29,9 +29,9 @@
         "friendsofphp/php-cs-fixer": "~1.12"
     },
     "autoload": {
-        "psr-4": { "EzzeSiftuz\\Quantitiesv2\\" : "lib/" }
+        "psr-4": { "EzzeSiftuz\\QuantitiesV2\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "EzzeSiftuz\\Quantitiesv2\\" : "test/" }
+        "psr-4": { "EzzeSiftuz\\QuantitiesV2\\" : "test/" }
     }
 }

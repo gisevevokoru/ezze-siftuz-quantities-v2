@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  EzzeSiftuz\Quantitiesv2
+ * @package  EzzeSiftuz\QuantitiesV2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,14 +26,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace EzzeSiftuz\Quantitiesv2;
+namespace EzzeSiftuz\QuantitiesV2;
 
 /**
  * ApiErrorV2Test Class Doc Comment
  *
  * @category    Class
  * @description ApiErrorV2
- * @package     EzzeSiftuz\Quantitiesv2
+ * @package     EzzeSiftuz\QuantitiesV2
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
