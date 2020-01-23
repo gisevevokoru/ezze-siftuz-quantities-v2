@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  EzzeSiftuz\Quantities_v2
+ * @package  EzzeSiftuz\Quantitiesv2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace EzzeSiftuz\Quantities_v2\Model;
+namespace EzzeSiftuz\Quantitiesv2\Model;
 
 use \ArrayAccess;
-use \EzzeSiftuz\Quantities_v2\ObjectSerializer;
+use \EzzeSiftuz\Quantitiesv2\ObjectSerializer;
 
 /**
  * ApiErrorResponseV2 Class Doc Comment
  *
  * @category Class
- * @package  EzzeSiftuz\Quantities_v2
+ * @package  EzzeSiftuz\Quantitiesv2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,7 +56,7 @@ class ApiErrorResponseV2 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'errors' => '\EzzeSiftuz\Quantities_v2\Model\ApiErrorV2[]'    ];
+        'errors' => '\EzzeSiftuz\Quantitiesv2\Model\ApiErrorV2[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -202,7 +202,7 @@ class ApiErrorResponseV2 implements ModelInterface, ArrayAccess
     /**
      * Gets errors
      *
-     * @return \EzzeSiftuz\Quantities_v2\Model\ApiErrorV2[]
+     * @return \EzzeSiftuz\Quantitiesv2\Model\ApiErrorV2[]
      */
     public function getErrors()
     {
@@ -212,7 +212,7 @@ class ApiErrorResponseV2 implements ModelInterface, ArrayAccess
     /**
      * Sets errors
      *
-     * @param \EzzeSiftuz\Quantities_v2\Model\ApiErrorV2[] $errors list of errors
+     * @param \EzzeSiftuz\Quantitiesv2\Model\ApiErrorV2[] $errors list of errors
      *
      * @return $this
      */

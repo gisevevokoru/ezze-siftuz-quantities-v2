@@ -1,5 +1,5 @@
 {
-    "name": "gisevevokoru/EzzeSiftuz-Quantities-v2",
+    "name": "gisevevokoru/ezze-siftuz-quantities-v2",
     "version": "v1.0",
     "description": "",
     "keywords": [
@@ -29,9 +29,9 @@
         "friendsofphp/php-cs-fixer": "~1.12"
     },
     "autoload": {
-        "psr-4": { "EzzeSiftuz\\Quantities_v2\\" : "lib/" }
+        "psr-4": { "EzzeSiftuz\\Quantitiesv2\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "EzzeSiftuz\\Quantities_v2\\" : "test/" }
+        "psr-4": { "EzzeSiftuz\\Quantitiesv2\\" : "test/" }
     }
 }

@@ -1,4 +1,4 @@
-# EzzeSiftuz\Quantities_v2\AvailableQuantityApi
+# EzzeSiftuz\Quantitiesv2\AvailableQuantityApi
 
 All URIs are relative to */*
 
@@ -16,12 +16,12 @@ Update the available quantity for a specific SKU (up to 200 SKUs per request)
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new EzzeSiftuz\Quantities_v2\Api\AvailableQuantityApi(
+$apiInstance = new EzzeSiftuz\Quantitiesv2\Api\AvailableQuantityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = array(new \EzzeSiftuz\Quantities_v2\Model\AvailableQuantityRequestDTOV2()); // \EzzeSiftuz\Quantities_v2\Model\AvailableQuantityRequestDTOV2[] | availableQuantityRequestDTO
+$body = array(new \EzzeSiftuz\Quantitiesv2\Model\AvailableQuantityRequestDTOV2()); // \EzzeSiftuz\Quantitiesv2\Model\AvailableQuantityRequestDTOV2[] | availableQuantityRequestDTO
 $authorization = "\"Bearer access_token\""; // string | Access Token
 $name = "name_example"; // string | 
 
@@ -38,7 +38,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\EzzeSiftuz\Quantities_v2\Model\AvailableQuantityRequestDTOV2[]**](../Model/AvailableQuantityRequestDTOV2.md)| availableQuantityRequestDTO |
+ **body** | [**\EzzeSiftuz\Quantitiesv2\Model\AvailableQuantityRequestDTOV2[]**](../Model/AvailableQuantityRequestDTOV2.md)| availableQuantityRequestDTO |
  **authorization** | **string**| Access Token |
  **name** | **string**|  | [optional]
 

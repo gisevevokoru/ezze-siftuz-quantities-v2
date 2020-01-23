@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  EzzeSiftuz\Quantities_v2
+ * @package  EzzeSiftuz\Quantitiesv2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace EzzeSiftuz\Quantities_v2\Model;
+namespace EzzeSiftuz\Quantitiesv2\Model;
 
 use \ArrayAccess;
-use \EzzeSiftuz\Quantities_v2\ObjectSerializer;
+use \EzzeSiftuz\Quantitiesv2\ObjectSerializer;
 
 /**
  * AvailableQuantityRequestDTOV2 Class Doc Comment
  *
  * @category Class
- * @package  EzzeSiftuz\Quantities_v2
+ * @package  EzzeSiftuz\Quantitiesv2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

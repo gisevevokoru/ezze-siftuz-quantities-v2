@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  EzzeSiftuz\Quantities_v2
+ * @package  EzzeSiftuz\Quantitiesv2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,14 +26,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace EzzeSiftuz\Quantities_v2;
+namespace EzzeSiftuz\Quantitiesv2;
 
 /**
  * AvailableQuantityRequestDTOV2Test Class Doc Comment
  *
  * @category    Class
  * @description AvailableQuantityRequestDTOV2
- * @package     EzzeSiftuz\Quantities_v2
+ * @package     EzzeSiftuz\Quantitiesv2
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
