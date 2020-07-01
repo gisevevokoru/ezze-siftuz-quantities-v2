@@ -1,13 +1,13 @@
 # EzzeSiftuz\QuantitiesV2\AvailableQuantityApi
 
-All URIs are relative to */*
+All URIs are relative to *https://available-quantity-gateway.develop.availability.platform.otto.de/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**storeAvailableQuantitiesUsingPOST**](AvailableQuantityApi.md#storeavailablequantitiesusingpost) | **POST** /v2/quantities | Update the available quantity for a specific SKU (up to 200 SKUs per request)
 
 # **storeAvailableQuantitiesUsingPOST**
-> object storeAvailableQuantitiesUsingPOST($body, $authorization, $name)
+> object storeAvailableQuantitiesUsingPOST($body)
 
 Update the available quantity for a specific SKU (up to 200 SKUs per request)
 
@@ -22,11 +22,9 @@ $apiInstance = new EzzeSiftuz\QuantitiesV2\Api\AvailableQuantityApi(
     new GuzzleHttp\Client()
 );
 $body = array(new \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2()); // \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[] | availableQuantityRequestDTO
-$authorization = "\"Bearer access_token\""; // string | Access Token
-$name = "name_example"; // string | 
 
 try {
-    $result = $apiInstance->storeAvailableQuantitiesUsingPOST($body, $authorization, $name);
+    $result = $apiInstance->storeAvailableQuantitiesUsingPOST($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AvailableQuantityApi->storeAvailableQuantitiesUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -39,8 +37,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[]**](../Model/AvailableQuantityRequestDTOV2.md)| availableQuantityRequestDTO |
- **authorization** | **string**| Access Token |
- **name** | **string**|  | [optional]
 
 ### Return type
 
