@@ -1,4 +1,4 @@
-# AvailableQuantityRequestDTOV2
+# AvailableQuantitySingleResponseDTOV2
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,6 +1,6 @@
 <?php
 /**
- * UpdateQuantityMultiStatusResponse
+ * AvailableQuantityResponseV2
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \EzzeSiftuz\QuantitiesV2\ObjectSerializer;
 
 /**
- * UpdateQuantityMultiStatusResponse Class Doc Comment
+ * AvailableQuantityResponseV2 Class Doc Comment
  *
  * @category Class
  * @package  EzzeSiftuz\QuantitiesV2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
+class AvailableQuantityResponseV2 implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'UpdateQuantityMultiStatusResponse';
+    protected static $swaggerModelName = 'AvailableQuantityResponseV2';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,8 +56,8 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'results' => '\EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[]',
-'errors' => '\EzzeSiftuz\QuantitiesV2\Model\ApiErrorV2[]'    ];
+        'resources' => '\EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityResponseV2Resources',
+'links' => '\EzzeSiftuz\QuantitiesV2\Model\Link[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +65,8 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'results' => null,
-'errors' => null    ];
+        'resources' => null,
+'links' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +95,8 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'results' => 'results',
-'errors' => 'errors'    ];
+        'resources' => 'resources',
+'links' => 'links'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +104,8 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'results' => 'setResults',
-'errors' => 'setErrors'    ];
+        'resources' => 'setResources',
+'links' => 'setLinks'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +113,8 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'results' => 'getResults',
-'errors' => 'getErrors'    ];
+        'resources' => 'getResources',
+'links' => 'getLinks'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +174,8 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['results'] = isset($data['results']) ? $data['results'] : null;
-        $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
+        $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
     }
 
     /**
@@ -187,8 +187,11 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['results'] === null) {
-            $invalidProperties[] = "'results' can't be null";
+        if ($this->container['resources'] === null) {
+            $invalidProperties[] = "'resources' can't be null";
+        }
+        if ($this->container['links'] === null) {
+            $invalidProperties[] = "'links' can't be null";
         }
         return $invalidProperties;
     }
@@ -206,49 +209,49 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets results
+     * Gets resources
      *
-     * @return \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[]
+     * @return \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityResponseV2Resources
      */
-    public function getResults()
+    public function getResources()
     {
-        return $this->container['results'];
+        return $this->container['resources'];
     }
 
     /**
-     * Sets results
+     * Sets resources
      *
-     * @param \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[] $results List of all the skus with available quantity
+     * @param \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityResponseV2Resources $resources resources
      *
      * @return $this
      */
-    public function setResults($results)
+    public function setResources($resources)
     {
-        $this->container['results'] = $results;
+        $this->container['resources'] = $resources;
 
         return $this;
     }
 
     /**
-     * Gets errors
+     * Gets links
      *
-     * @return \EzzeSiftuz\QuantitiesV2\Model\ApiErrorV2[]
+     * @return \EzzeSiftuz\QuantitiesV2\Model\Link[]
      */
-    public function getErrors()
+    public function getLinks()
     {
-        return $this->container['errors'];
+        return $this->container['links'];
     }
 
     /**
-     * Sets errors
+     * Sets links
      *
-     * @param \EzzeSiftuz\QuantitiesV2\Model\ApiErrorV2[] $errors errors
+     * @param \EzzeSiftuz\QuantitiesV2\Model\Link[] $links contains links to prev, self and next page url's
      *
      * @return $this
      */
-    public function setErrors($errors)
+    public function setLinks($links)
     {
-        $this->container['errors'] = $errors;
+        $this->container['links'] = $links;
 
         return $this;
     }

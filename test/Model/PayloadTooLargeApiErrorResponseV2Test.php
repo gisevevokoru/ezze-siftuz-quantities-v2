@@ -1,6 +1,6 @@
 <?php
 /**
- * AvailableQuantityRequestDTOV2Test
+ * PayloadTooLargeApiErrorResponseV2Test
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace EzzeSiftuz\QuantitiesV2;
 
 /**
- * AvailableQuantityRequestDTOV2Test Class Doc Comment
+ * PayloadTooLargeApiErrorResponseV2Test Class Doc Comment
  *
  * @category    Class
- * @description AvailableQuantityRequestDTOV2
+ * @description PayloadTooLargeApiErrorResponseV2
  * @package     EzzeSiftuz\QuantitiesV2
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AvailableQuantityRequestDTOV2Test extends \PHPUnit_Framework_TestCase
+class PayloadTooLargeApiErrorResponseV2Test extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,30 +69,16 @@ class AvailableQuantityRequestDTOV2Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "AvailableQuantityRequestDTOV2"
+     * Test "PayloadTooLargeApiErrorResponseV2"
      */
-    public function testAvailableQuantityRequestDTOV2()
+    public function testPayloadTooLargeApiErrorResponseV2()
     {
     }
 
     /**
-     * Test attribute "last_modified"
+     * Test attribute "errors"
      */
-    public function testPropertyLastModified()
-    {
-    }
-
-    /**
-     * Test attribute "quantity"
-     */
-    public function testPropertyQuantity()
-    {
-    }
-
-    /**
-     * Test attribute "sku"
-     */
-    public function testPropertySku()
+    public function testPropertyErrors()
     {
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * UpdateQuantityMultiStatusResponse
+ * AvailableQuantityResponseDTOV2
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \EzzeSiftuz\QuantitiesV2\ObjectSerializer;
 
 /**
- * UpdateQuantityMultiStatusResponse Class Doc Comment
+ * AvailableQuantityResponseDTOV2 Class Doc Comment
  *
  * @category Class
  * @package  EzzeSiftuz\QuantitiesV2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
+class AvailableQuantityResponseDTOV2 implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'UpdateQuantityMultiStatusResponse';
+    protected static $swaggerModelName = 'AvailableQuantityResponseDTOV2';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,8 +56,10 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'results' => '\EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[]',
-'errors' => '\EzzeSiftuz\QuantitiesV2\Model\ApiErrorV2[]'    ];
+        'last_modified' => 'string',
+'quantity' => 'int',
+'sku' => 'string',
+'links' => '\EzzeSiftuz\QuantitiesV2\Model\Link[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +67,10 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'results' => null,
-'errors' => null    ];
+        'last_modified' => null,
+'quantity' => 'int64',
+'sku' => null,
+'links' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +99,10 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'results' => 'results',
-'errors' => 'errors'    ];
+        'last_modified' => 'lastModified',
+'quantity' => 'quantity',
+'sku' => 'sku',
+'links' => 'links'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +110,10 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'results' => 'setResults',
-'errors' => 'setErrors'    ];
+        'last_modified' => 'setLastModified',
+'quantity' => 'setQuantity',
+'sku' => 'setSku',
+'links' => 'setLinks'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +121,10 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'results' => 'getResults',
-'errors' => 'getErrors'    ];
+        'last_modified' => 'getLastModified',
+'quantity' => 'getQuantity',
+'sku' => 'getSku',
+'links' => 'getLinks'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +184,10 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['results'] = isset($data['results']) ? $data['results'] : null;
-        $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
+        $this->container['last_modified'] = isset($data['last_modified']) ? $data['last_modified'] : null;
+        $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
+        $this->container['sku'] = isset($data['sku']) ? $data['sku'] : null;
+        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
     }
 
     /**
@@ -187,8 +199,17 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['results'] === null) {
-            $invalidProperties[] = "'results' can't be null";
+        if ($this->container['last_modified'] === null) {
+            $invalidProperties[] = "'last_modified' can't be null";
+        }
+        if ($this->container['quantity'] === null) {
+            $invalidProperties[] = "'quantity' can't be null";
+        }
+        if ($this->container['sku'] === null) {
+            $invalidProperties[] = "'sku' can't be null";
+        }
+        if ($this->container['links'] === null) {
+            $invalidProperties[] = "'links' can't be null";
         }
         return $invalidProperties;
     }
@@ -206,49 +227,97 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets results
+     * Gets last_modified
      *
-     * @return \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[]
+     * @return string
      */
-    public function getResults()
+    public function getLastModified()
     {
-        return $this->container['results'];
+        return $this->container['last_modified'];
     }
 
     /**
-     * Sets results
+     * Sets last_modified
      *
-     * @param \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[] $results List of all the skus with available quantity
+     * @param string $last_modified The last modified date and time of available quantity as a ISO8601 format (yyyy-MM-dd'T'HH:mm:ss.SSSX). This date should not be neither in future nor older than previous lastModified value from partner. If it is future date/time, then it will lead to an error response. If it is older than previous lastModified value from partner, then the quantity update will be ignored. It is used to ensure the current status of the updated quantities.
      *
      * @return $this
      */
-    public function setResults($results)
+    public function setLastModified($last_modified)
     {
-        $this->container['results'] = $results;
+        $this->container['last_modified'] = $last_modified;
 
         return $this;
     }
 
     /**
-     * Gets errors
+     * Gets quantity
      *
-     * @return \EzzeSiftuz\QuantitiesV2\Model\ApiErrorV2[]
+     * @return int
      */
-    public function getErrors()
+    public function getQuantity()
     {
-        return $this->container['errors'];
+        return $this->container['quantity'];
     }
 
     /**
-     * Sets errors
+     * Sets quantity
      *
-     * @param \EzzeSiftuz\QuantitiesV2\Model\ApiErrorV2[] $errors errors
+     * @param int $quantity The available quantity of a specific SKU, which can be any integer value >= 0.
      *
      * @return $this
      */
-    public function setErrors($errors)
+    public function setQuantity($quantity)
     {
-        $this->container['errors'] = $errors;
+        $this->container['quantity'] = $quantity;
+
+        return $this;
+    }
+
+    /**
+     * Gets sku
+     *
+     * @return string
+     */
+    public function getSku()
+    {
+        return $this->container['sku'];
+    }
+
+    /**
+     * Sets sku
+     *
+     * @param string $sku StockKeepingUnit given by partner configuration. e.g. 'shirt-red-M', external identifier of article variation.
+     *
+     * @return $this
+     */
+    public function setSku($sku)
+    {
+        $this->container['sku'] = $sku;
+
+        return $this;
+    }
+
+    /**
+     * Gets links
+     *
+     * @return \EzzeSiftuz\QuantitiesV2\Model\Link[]
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     *
+     * @param \EzzeSiftuz\QuantitiesV2\Model\Link[] $links contains links to prev, self and next page url's
+     *
+     * @return $this
+     */
+    public function setLinks($links)
+    {
+        $this->container['links'] = $links;
 
         return $this;
     }

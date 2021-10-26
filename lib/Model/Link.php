@@ -1,6 +1,6 @@
 <?php
 /**
- * UpdateQuantityMultiStatusResponse
+ * Link
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \EzzeSiftuz\QuantitiesV2\ObjectSerializer;
 
 /**
- * UpdateQuantityMultiStatusResponse Class Doc Comment
+ * Link Class Doc Comment
  *
  * @category Class
  * @package  EzzeSiftuz\QuantitiesV2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
+class Link implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'UpdateQuantityMultiStatusResponse';
+    protected static $swaggerModelName = 'Link';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,8 +56,8 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'results' => '\EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[]',
-'errors' => '\EzzeSiftuz\QuantitiesV2\Model\ApiErrorV2[]'    ];
+        'rel' => 'string',
+'href' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +65,8 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'results' => null,
-'errors' => null    ];
+        'rel' => null,
+'href' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +95,8 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'results' => 'results',
-'errors' => 'errors'    ];
+        'rel' => 'rel',
+'href' => 'href'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +104,8 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'results' => 'setResults',
-'errors' => 'setErrors'    ];
+        'rel' => 'setRel',
+'href' => 'setHref'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +113,8 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'results' => 'getResults',
-'errors' => 'getErrors'    ];
+        'rel' => 'getRel',
+'href' => 'getHref'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -157,7 +157,22 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
+    const REL_SELF = 'self';
+const REL_PREV = 'prev';
+const REL_NEXT = 'next';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getRelAllowableValues()
+    {
+        return [
+            self::REL_SELF,
+self::REL_PREV,
+self::REL_NEXT,        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -174,8 +189,8 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['results'] = isset($data['results']) ? $data['results'] : null;
-        $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
+        $this->container['rel'] = isset($data['rel']) ? $data['rel'] : null;
+        $this->container['href'] = isset($data['href']) ? $data['href'] : null;
     }
 
     /**
@@ -187,9 +202,14 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['results'] === null) {
-            $invalidProperties[] = "'results' can't be null";
+        $allowedValues = $this->getRelAllowableValues();
+        if (!is_null($this->container['rel']) && !in_array($this->container['rel'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'rel', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
         }
+
         return $invalidProperties;
     }
 
@@ -206,49 +226,58 @@ class UpdateQuantityMultiStatusResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets results
+     * Gets rel
      *
-     * @return \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[]
+     * @return string
      */
-    public function getResults()
+    public function getRel()
     {
-        return $this->container['results'];
+        return $this->container['rel'];
     }
 
     /**
-     * Sets results
+     * Sets rel
      *
-     * @param \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[] $results List of all the skus with available quantity
+     * @param string $rel link relation type
      *
      * @return $this
      */
-    public function setResults($results)
+    public function setRel($rel)
     {
-        $this->container['results'] = $results;
+        $allowedValues = $this->getRelAllowableValues();
+        if (!is_null($rel) && !in_array($rel, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'rel', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['rel'] = $rel;
 
         return $this;
     }
 
     /**
-     * Gets errors
+     * Gets href
      *
-     * @return \EzzeSiftuz\QuantitiesV2\Model\ApiErrorV2[]
+     * @return string
      */
-    public function getErrors()
+    public function getHref()
     {
-        return $this->container['errors'];
+        return $this->container['href'];
     }
 
     /**
-     * Sets errors
+     * Sets href
      *
-     * @param \EzzeSiftuz\QuantitiesV2\Model\ApiErrorV2[] $errors errors
+     * @param string $href the linked reference as URI
      *
      * @return $this
      */
-    public function setErrors($errors)
+    public function setHref($href)
     {
-        $this->container['errors'] = $errors;
+        $this->container['href'] = $href;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * AvailableQuantityRequestDTOV2Test
+ * AvailableQuantityResponseV2Test
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace EzzeSiftuz\QuantitiesV2;
 
 /**
- * AvailableQuantityRequestDTOV2Test Class Doc Comment
+ * AvailableQuantityResponseV2Test Class Doc Comment
  *
  * @category    Class
- * @description AvailableQuantityRequestDTOV2
+ * @description AvailableQuantityResponseV2
  * @package     EzzeSiftuz\QuantitiesV2
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AvailableQuantityRequestDTOV2Test extends \PHPUnit_Framework_TestCase
+class AvailableQuantityResponseV2Test extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,30 +69,23 @@ class AvailableQuantityRequestDTOV2Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "AvailableQuantityRequestDTOV2"
+     * Test "AvailableQuantityResponseV2"
      */
-    public function testAvailableQuantityRequestDTOV2()
+    public function testAvailableQuantityResponseV2()
     {
     }
 
     /**
-     * Test attribute "last_modified"
+     * Test attribute "resources"
      */
-    public function testPropertyLastModified()
+    public function testPropertyResources()
     {
     }
 
     /**
-     * Test attribute "quantity"
+     * Test attribute "links"
      */
-    public function testPropertyQuantity()
-    {
-    }
-
-    /**
-     * Test attribute "sku"
-     */
-    public function testPropertySku()
+    public function testPropertyLinks()
     {
     }
 }

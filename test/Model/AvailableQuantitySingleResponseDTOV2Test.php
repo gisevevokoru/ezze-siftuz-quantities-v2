@@ -1,6 +1,6 @@
 <?php
 /**
- * AvailableQuantityRequestDTOV2Test
+ * AvailableQuantitySingleResponseDTOV2Test
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace EzzeSiftuz\QuantitiesV2;
 
 /**
- * AvailableQuantityRequestDTOV2Test Class Doc Comment
+ * AvailableQuantitySingleResponseDTOV2Test Class Doc Comment
  *
  * @category    Class
- * @description AvailableQuantityRequestDTOV2
+ * @description AvailableQuantitySingleResponseDTOV2
  * @package     EzzeSiftuz\QuantitiesV2
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class AvailableQuantityRequestDTOV2Test extends \PHPUnit_Framework_TestCase
+class AvailableQuantitySingleResponseDTOV2Test extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,9 +69,9 @@ class AvailableQuantityRequestDTOV2Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "AvailableQuantityRequestDTOV2"
+     * Test "AvailableQuantitySingleResponseDTOV2"
      */
-    public function testAvailableQuantityRequestDTOV2()
+    public function testAvailableQuantitySingleResponseDTOV2()
     {
     }
 

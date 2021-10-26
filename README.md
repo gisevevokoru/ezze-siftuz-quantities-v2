@@ -21,7 +21,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/gisevevokoru/ezze-siftuz-quantities-v2.git"
+      "url": "http://github.com/gisevevokoru/ezze-siftuz-quantities-v2.git"
     }
   ],
   "require": {
@@ -62,6 +62,35 @@ $apiInstance = new EzzeSiftuz\QuantitiesV2\Api\AvailableQuantityApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$limit = 200; // int | The maximum number of available quantities to be returned in each response.
+$page = 0; // int | Page number (0..N)
+
+try {
+    $result = $apiInstance->getAvailableQuantities($limit, $page);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AvailableQuantityApi->getAvailableQuantities: ', $e->getMessage(), PHP_EOL;
+}
+
+$apiInstance = new EzzeSiftuz\QuantitiesV2\Api\AvailableQuantityApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$sku = "sku_example"; // string | The sku for the available quantity
+
+try {
+    $result = $apiInstance->getAvailableQuantityBySku($sku);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AvailableQuantityApi->getAvailableQuantityBySku: ', $e->getMessage(), PHP_EOL;
+}
+
+$apiInstance = new EzzeSiftuz\QuantitiesV2\Api\AvailableQuantityApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $body = array(new \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2()); // \EzzeSiftuz\QuantitiesV2\Model\AvailableQuantityRequestDTOV2[] | availableQuantityRequestDTO
 
 try {
@@ -75,10 +104,12 @@ try {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://available-quantity-gateway.develop.availability.platform.otto.de/*
+All URIs are relative to *https://live.api.otto.market/*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AvailableQuantityApi* | [**getAvailableQuantities**](docs/Api/AvailableQuantityApi.md#getavailablequantities) | **GET** /v2/quantities | Get available quantities for a specific Partner (Upto 200 per request). The partner needs to update the quantities for all his products once or limit the products being returned in the response by setting the limit value to number of products they have updated
+*AvailableQuantityApi* | [**getAvailableQuantityBySku**](docs/Api/AvailableQuantityApi.md#getavailablequantitybysku) | **GET** /v2/quantities/{sku} | Get available quantity for a specific Sku
 *AvailableQuantityApi* | [**storeAvailableQuantitiesUsingPOST**](docs/Api/AvailableQuantityApi.md#storeavailablequantitiesusingpost) | **POST** /v2/quantities | Update the available quantity for a specific SKU (up to 200 SKUs per request)
 
 ## Documentation For Models
@@ -86,6 +117,12 @@ Class | Method | HTTP request | Description
  - [ApiErrorResponseV2](docs/Model/ApiErrorResponseV2.md)
  - [ApiErrorV2](docs/Model/ApiErrorV2.md)
  - [AvailableQuantityRequestDTOV2](docs/Model/AvailableQuantityRequestDTOV2.md)
+ - [AvailableQuantityResponseDTOV2](docs/Model/AvailableQuantityResponseDTOV2.md)
+ - [AvailableQuantityResponseV2](docs/Model/AvailableQuantityResponseV2.md)
+ - [AvailableQuantityResponseV2Resources](docs/Model/AvailableQuantityResponseV2Resources.md)
+ - [AvailableQuantitySingleResponseDTOV2](docs/Model/AvailableQuantitySingleResponseDTOV2.md)
+ - [Link](docs/Model/Link.md)
+ - [PayloadTooLargeApiErrorResponseV2](docs/Model/PayloadTooLargeApiErrorResponseV2.md)
  - [UpdateQuantityMultiStatusResponse](docs/Model/UpdateQuantityMultiStatusResponse.md)
 
 ## Documentation For Authorization
